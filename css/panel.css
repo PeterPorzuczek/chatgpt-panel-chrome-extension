@@ -1,0 +1,47 @@
+/* General Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+  color: #333;
+}
+
+#iframe {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  border-radius: 16px;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.extension-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #d4d9e3, #eef1f5);
+}
+
+#iframe {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

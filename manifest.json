@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Panel",
+  "version": "0.0.1",
+  "description": "A Chrome extension that brings ChatGPT to your browser panel",
+  "permissions": [
+    "sidePanel",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "action": {
+    "default_title": "ChatGPT Panel Chrome Extension"
+  },
+  "host_permissions": ["https://chatgpt.com/"]
+}
